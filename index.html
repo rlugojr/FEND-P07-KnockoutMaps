@@ -10,12 +10,17 @@
 
     <body>
         <h1>Wonders of the World</h1>
-        <div id="loaded"></div>
+        <div id="selectLocation">
+            <h2>Pick a Country</h2>
+            <ul data-bind="foreach: locationList">
+                <li data-bind="text: country">
+                </li>
+            </ul>
+        </div>
 
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">
+        <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
         <script src="data/data.js"></script>
         <script src="lib/js/fetch.js"></script>

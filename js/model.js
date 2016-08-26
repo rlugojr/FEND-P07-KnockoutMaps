@@ -5,14 +5,12 @@ var model = function () {
 		return dataFile;
 	};
 
-
 	dataModel.getAPIData = function ( url ) {
 		var fetchOpts = {
 			method: 'GET',
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			credentials: 'omit'
 		};
 
 		fetch( url, fetchOpts )
