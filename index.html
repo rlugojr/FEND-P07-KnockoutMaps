@@ -9,23 +9,64 @@
     </head>
 
     <body>
-        <h1>Wonders of the World</h1>
-        <div id="selectLocation">
-            <h2>Pick a Country</h2>
-            <ul data-bind="foreach: locationList">
-                <li data-bind="text: country">
-                </li>
-            </ul>
+        <div class="collapse" id="locationInfo">
+            <div class="container-fluid" id="locationInfoText">
+                The standard Lorem Ipsum passage, used since the 1500s Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                est laborum. Section 1.10.32 of de Finibus Bonorum et Malorum, written by Cicero in 45 BC Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+                corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-inverse">
+            <div class="nav navbar-nav">
+                <button class="btn btn-primary pull-right" type="button" onclick="view.toggleNav()">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <button class="btn btn-primary pull-right" type="button" data-toggle="collapse" data-target="#locationInfo" aria-expanded="false" aria-controls="locationInfo">
+                    Read Info
+                </button>
+                <button class="btn btn-primary pull-right" type="button"><i class="fa fa-search"></i></button>
+            </div>
+        </nav>
+
+
+        <div id="sideList" class="sidenav">
+            <div id="cardlist" data-bind="foreach: locationList">
+                <div id="locationCard" class="card card-inverse">
+                    <img class="card-img" width="320px" src="http://whc.unesco.org/uploads/thumbs/site_1100_0004-500-333-19700101010000.jpg" data-bind="alt: name">
+                    <div class="card-img-overlay">
+                        <h6 class="card-text" data-bind="text: name, click: $parent.selectedLocation"></h6>
+                        <p class="card-text">
+                            <small class="text-muted" data-bind="text: country"></small></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css">-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js"></script>-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
-        <script src="data/data.js"></script>
-        <script src="lib/js/fetch.js"></script>
-        <script src="js/model.js"></script>
-        <script src="js/viewModel.js"></script>
+        <div id="mapContainer" class="container">
+            <div id="map" data-bind="with: currentLocation">
+                <div data-bind="text: name "></div>
+                <div data-bind="text: country "></div>
+                <div data-bind="text: category "></div>
+                <div data-bind="text: latLng"></div>
+            </div>
+        </div>
+
+        <script src="https://use.fontawesome.com/ac72e84750.js "></script>
+        <link rel="stylesheet " href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css " integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY " crossorigin="anonymous ">
+        <link rel="stylesheet " href="css/styles.css ">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js " integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js " integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB " crossorigin="anonymous "></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/js/bootstrap.min.js " integrity="sha384-ux8v3A6CPtOTqOzMKiuo3d/DomGaaClxFYdCu2HPMBEkf6x2xiDyJ7gkXU0MWwaD " crossorigin="anonymous "></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js "></script>
+        <script src="data/data.js "></script>
+        <script src="lib/js/fetch.js "></script>
+        <script src="js/model.js "></script>
+        <script src="js/viewModel.js "></script>
+        <script src="js/view.js "></script>
+        <script src="js/app.js "></script>
     </body>
 
 </html>

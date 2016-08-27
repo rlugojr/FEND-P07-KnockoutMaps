@@ -1,7 +1,8 @@
-( function () {
+var viewModel = ( function () {
 	var worldSitesData = model.getLocalData( worldSites );
 
 	var myAPIData = model.getAPIData( 'http://jsonplaceholder.typicode.com/posts/1/comments' );
+
 
 	var Location = function ( data ) {
 		var self = this;
@@ -11,34 +12,44 @@
 		this.lat = ko.observable( data.lat );
 		this.lng = ko.observable( data.lng );
 		this.latLng = ko.computed( function () {
-			var latLng = ( data.lat + ', ' + data.lng );
+			return ( data.lat + ', ' + data.lng );
 		}, this );
 		this.category = ko.observable( data.category );
 		this.country = ko.observable( data.states_name_en );
 	};
 
-	var ViewModel = function () {
+	var ListViewModel = function () {
 		var self = this;
 
-		//Array to hold CoolCat ViewModel objects
 		this.locationList = ko.observableArray( [] );
-		//Populate the array.
-		worldSitesData.forEach( function ( worldSiteItem ) {
 
-			if ( self.locationList.indexOf( worldSiteItem ) == -1 ) {
-				self.locationList.push( new Location( worldSiteItem ) );
-			}
+		worldSitesData.forEach( function ( worldSiteItem ) {
+			self.locationList.push( new Location( worldSiteItem ) );
 		} );
 
 		this.currentLocation = ko.observable( this.locationList()[ 0 ] );
 
+		this.selectedLocation = function ( clickedLocation ) {
+			console.log( clickedLocation );
+			self.currentLocation( clickedLocation );
+		};
+
 	};
 
-	ko.applyBindings( new ViewModel() );
+
+	var init = function () {
+
+		Location( worldSitesData );
+		ListViewModel();
+
+		ko.applyBindings( new ListViewModel() );
+	};
+
 
 	return {
 		Location: Location,
-		ViewModel: ViewModel
+		ListViewModel: ListViewModel,
+		init: init
 	};
 
-}() );
+} )();

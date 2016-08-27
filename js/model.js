@@ -1,11 +1,12 @@
-var model = function () {
+var model = ( function () {
+
 	var dataModel = {};
 
-	dataModel.getLocalData = function ( dataFile ) {
+	var getLocalData = function ( dataFile ) {
 		return dataFile;
 	};
 
-	dataModel.getAPIData = function ( url ) {
+	var getAPIData = function ( url ) {
 		var fetchOpts = {
 			method: 'GET',
 			headers: {
@@ -25,6 +26,9 @@ var model = function () {
 
 	};
 
-	return dataModel;
+	return {
+		getLocalData: getLocalData,
+		getAPIData: getAPIData
+	};
 
-}( Window );
+} )();
