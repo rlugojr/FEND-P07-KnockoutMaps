@@ -36,8 +36,8 @@
             <div id="cardlist" data-bind="foreach: locationList">
                 <div id="locationCard" class="card card-inverse">
                     <img class="card-img" width="320px" src="http://whc.unesco.org/uploads/thumbs/site_1100_0004-500-333-19700101010000.jpg" data-bind="alt: name">
-                    <div class="card-img-overlay">
-                        <h6 class="card-text" data-bind="text: name, click: $parent.selectedLocation"></h6>
+                    <div class="card-img-overlay" data-bind="click: $parent.selectedLocation">
+                        <h6 class="card-text" data-bind="text: name"></h6>
                         <p class="card-text">
                             <small class="text-muted" data-bind="text: country"></small></p>
                     </div>
