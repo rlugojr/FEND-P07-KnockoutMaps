@@ -1,9 +1,13 @@
 var viewModel = ( function () {
 	var worldSitesData = model.getLocalData( worldSites );
 
+	worldSitesData.forEach( function ( dataItem ) {
+		var wikiProcess = model.getWikiContent( dataItem.id, dataItem.name );
+	} );
+
 	//var myAPIData = model.getAPIData( //http://jsonplaceholder.typicode.com/posts/1/comments' );
 
-	var wikiContent = model.getWikiContent( 'Persepolis', 114 );
+
 
 	var Location = function ( data ) {
 		var self = this;
@@ -14,6 +18,9 @@ var viewModel = ( function () {
 		this.placeId = ko.observable( data.placeId );
 		this.category = ko.observable( data.category );
 		this.country = ko.observable( data.states_name_en );
+		this.thumbSrc = "";
+		this.wikiExtract = '';
+
 
 
 		//this.thumbnail = ko.observable( model.getWikiContent( data.name, 'pageimages' ) );

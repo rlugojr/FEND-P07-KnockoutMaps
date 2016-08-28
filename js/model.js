@@ -26,7 +26,7 @@ var model = ( function () {
 
 	};
 
-	var getWikiContent = function ( criteria, itemID ) {
+	var getWikiContent = function ( itemID, criteria ) {
 		//Wikipedia Ajax Request  PropTypes = extracts|pageimages
 
 		var wikiUrl = 'http://en.wikipedia.com/w/api.php?action=query&prop=extracts|pageimages&titles=' + encodeURIComponent( criteria ) + '&piprop=thumbnail&pithumbsize=320&format=json';
@@ -39,7 +39,7 @@ var model = ( function () {
 			} ).then( function ( json ) {
 				console.log( 'parsed json', json );
 				imgSrc = jsonPath( json, "$..source" ).toString();
-				imgList.push( {
+				wikiResources.push( {
 					itemID,
 					imgSrc
 				} );

@@ -1,4 +1,4 @@
-var imgList = [];
+var wikiResources = [];
 
 ( function main() {
 
