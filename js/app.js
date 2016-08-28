@@ -1,3 +1,5 @@
+var imgList = [];
+
 ( function main() {
 
 

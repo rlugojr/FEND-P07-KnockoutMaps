@@ -1,0 +1,138 @@
+var worldSites = [
+	{
+		"id": 211,
+		"name": "Minaret and Archaeological Remains of Jam",
+		"latLng": "34.3941094,64.5169722",
+		"placeId": "ChIJkwilai_7Lz8RtPGLeyznIh8",
+		"category": "Cultural",
+		"states_name_en": "Afghanistan"
+    },
+	{
+		"id": 1100,
+		"name": "Cristo Redentor",
+		"latLng": "-22.9518763,-43.2112374",
+		"placeId": "ChIJJ332e9V_mQARSqf2EfNFdWI",
+		"category": "Cultural",
+		"states_name_en": "Brazil"
+    },
+	{
+		"id": 438,
+		"name": "The Great Wall of Badaling",
+		"latLng": "40.357584,116.017822",
+		"placeId": "ChIJt1fzi2iT8DUROrvH_aNA5FY",
+		"category": "Cultural",
+		"states_name_en": "China"
+    },
+	{
+		"id": 441,
+		"name": "Mausoleum of the First Qin Emperor",
+		"latLng": "34.377564, 109.258013",
+		"placeId": "ChIJOWqGrZagZDYRM_pzMR8VVsU",
+		"category": "Cultural",
+		"states_name_en": "China"
+    },
+	{
+		"id": 526,
+		"name": "Alcazar de Diego Colon",
+		"latLng": "18.4773854, -69.8830572",
+		"placeId": "ChIJxYO7lhWIr44R1FZ9oQ5d_5I",
+		"category": "Cultural",
+		"states_name_en": "Dominican Republic"
+    },
+	{
+		"id": 86,
+		"name": "The Great Pyramid at Giza",
+		"latLng": "29.9772962,31.1303015",
+		"placeId": "ChIJYVt6XIdFWBQRflbPmEWFZR8",
+		"category": "Cultural",
+		"states_name_en": "Egypt"
+    },
+	{
+		"id": 87,
+		"name": "Great Spinx of Giza",
+		"latLng": "29.97496,31.1364519",
+		"placeId": "ChIJu2RSrWNPWBQR0cg8tHi8jd4",
+		"category": "Cultural",
+		"states_name_en": "Egypt"
+    },
+	{
+		"id": 80,
+		"name": "Mont-Saint-Michel and its Bay",
+		"latLng": "48.6360166,-1.5133085",
+		"placeId": "ChIJFePSVtaoDkgR6tjrKGsr9iY",
+		"category": "Cultural",
+		"states_name_en": "France"
+    },
+	{
+		"id": 81,
+		"name": "Chartres Cathedral",
+		"latLng": "48.4478026,1.4869519",
+		"placeId": "ChIJKzGHdEgM5EcR_OBTT3nQoEA",
+		"category": "Cultural",
+		"states_name_en": "France"
+    },
+	{
+		"id": 83,
+		"name": "Chateau de Versailles",
+		"latLng": "48.8073846,2.1052098",
+		"placeId": "ChIJx5lWWLl95kcRq3xG_hvqOwg",
+		"category": "Cultural",
+		"states_name_en": "France"
+    },
+	{
+		"id": 897,
+		"name": "Wartburg Castle",
+		"latLng": "50.9663423,10.3041484",
+		"placeId": "ChIJA9aMQXCcpEcRr084TctUNxY",
+		"category": "Cultural",
+		"states_name_en": "Germany"
+    },
+	{
+		"id": 393,
+		"name": "Delphi",
+		"latLng": "38.4823868,22.4987759",
+		"placeId": "ChIJn52jvWh5XxMRVRqVI3SRm2Y",
+		"category": "Cultural",
+		"states_name_en": "Greece"
+    },
+	{
+		"id": 404,
+		"name": "Acropolis, Athens",
+		"latLng": "37.9715323,23.7235552",
+		"placeId": "ChIJ86z1Nxi9oRQR9g3r9ULAl1w",
+		"category": "Cultural",
+		"states_name_en": "Greece"
+    },
+	{
+		"id": 454,
+		"name": "Mount Athos",
+		"latLng": "40.1535416,24.3155917",
+		"placeId": "ChIJNQyybXRIrxQRSDqjtAKQDRc",
+		"category": "Mixed",
+		"states_name_en": "Greece"
+    },
+	{
+		"id": 286,
+		"name": "Vatican City",
+		"latLng": "41.902141,12.453926",
+		"placeId": "ChIJJTk-DGZgLxMRPGxQNTiMSQA",
+		"category": "Cultural",
+		"states_name_en": "Holy See"
+    },
+	{
+		"id": 252,
+		"name": "Taj Mahal",
+		"latLng": "27.1750151,78.0399612",
+		"placeId": "ChIJoa7KUCBxdDkRXDAJ-ll67vU",
+		"category": "Cultural",
+		"states_name_en": "India"
+    },
+	{
+		"id": 114,
+		"name": "Persepolis",
+		"latLng": "29.9355133,52.8904617",
+		"placeId": "ChIJ77o-qV7jrT8RWHhg97btquE",
+		"category": "Cultural",
+		"states_name_en": "Iran"
+    }
+];

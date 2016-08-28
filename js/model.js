@@ -26,9 +26,32 @@ var model = ( function () {
 
 	};
 
+	var getWikiContent = function ( criteria, itemID ) {
+		//Wikipedia Ajax Request  PropTypes = extracts|pageimages
+
+		var wikiUrl = 'http://en.wikipedia.com/w/api.php?action=query&prop=extracts|pageimages&titles=' + encodeURIComponent( criteria ) + '&piprop=thumbnail&pithumbsize=320&format=json';
+
+		var result = fetchJsonp( wikiUrl, {
+				timeout: 3000
+			} )
+			.then( function ( response ) {
+				return response.json();
+			} ).then( function ( json ) {
+				console.log( 'parsed json', json );
+				imgSrc = jsonPath( json, "$..source" ).toString();
+				imgList.push( {
+					itemID,
+					imgSrc
+				} );
+			} ).catch( function ( ex ) {
+				console.log( 'parsing failed', ex );
+			} );
+	};
+
 	return {
 		getLocalData: getLocalData,
-		getAPIData: getAPIData
+		getAPIData: getAPIData,
+		getWikiContent: getWikiContent
 	};
 
 } )();
