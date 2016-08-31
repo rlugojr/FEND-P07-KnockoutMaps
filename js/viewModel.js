@@ -18,8 +18,8 @@ var viewModel = ( function () {
 		this.placeId = ko.observable( data.placeId );
 		this.category = ko.observable( data.category );
 		this.country = ko.observable( data.states_name_en );
-		this.thumbSrc = "";
-		this.wikiExtract = '';
+		//this.thumbSrc = "";
+		//this.wikiExtract = '';
 
 
 

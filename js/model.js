@@ -1,6 +1,6 @@
-var model = ( function () {
+var wikiResources = [];
 
-	var dataModel = {};
+var model = ( function () {
 
 	var getLocalData = function ( dataFile ) {
 		return dataFile;
@@ -38,10 +38,12 @@ var model = ( function () {
 				return response.json();
 			} ).then( function ( json ) {
 				console.log( 'parsed json', json );
-				imgSrc = jsonPath( json, "$..source" ).toString();
+				imgSrc = jsonPath( json, "$..source" );
+				excerpt = jsonPath( json, "$..excerpt" );
 				wikiResources.push( {
-					itemID,
-					imgSrc
+					"itemID": itemID,
+					"imgSrc": imgSrc,
+					"excerpt": excerpt
 				} );
 			} ).catch( function ( ex ) {
 				console.log( 'parsing failed', ex );

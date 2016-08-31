@@ -1,11 +1,9 @@
-var wikiResources = [];
-
-( function main() {
+ ( function main() {
 
 
 
-	viewModel.init();
+ 	viewModel.init();
 
 
 
-} )();
+ } )();
